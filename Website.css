@@ -1,13 +1,100 @@
 body {
   background-color: lightblue;
 }
-background-color: aquamarine;
-content: '';
-height: 4ch;
-position: absolute;
-top: 100%;
-width: var(--gap);
+* { box-sizing: border-box; }
+html {
+	--s: 100cqi;
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+  /* https://css-pattern.com/ */
+  background:
+    repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 180deg) 
+     calc(.5*var(--s)) calc(.5*var(--s)*0.577),
+    repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 180deg);
+  background-size: var(--s) calc(var(--s)*0.577);
 }
+body {
+	--_c: 5cqi;
+	--_cp: polygon(
+		0 var(--_c),
+		var(--_c) 0,
+		calc(100% - var(--_c)) 0,
+		100% var(--_c),
+		100% calc(100% - var(--_c)),
+		calc(100% - var(--_c)) 100%,
+		var(--_c) 100%,
+		0% calc(100% - var(--_c))
+	);
+	--gap: 2ch;
+  background-color: hsla(195deg, 95%, 20%, .65);
+  font-family: system-ui;
+	margin: 0;
+  padding: var(--gap);
+}
+h2 {
+  font-family: 'Orbitron', sans-serif;
+	font-size: var(--_c);
+	margin: 0;
+}
+table {
+	width: 100%;
+	& th { padding-block: 1ch; text-align: start; }
+	& :is(td, th):last-of-type { text-align: end; }
+}
+ul {
+	list-style-position: inside; 
+	padding: 0;
+  list-style-type: square;
+}
+li::marker { color: hsl(160, 100%, 75%); }
+
+.dashboard {
+	background: linear-gradient(to right, 
+		transparent 0 50%,
+		hsl(160, 100%, 75%) 50%,
+		hsl(160, 100%, 75%) 52%,
+		transparent 0 100%);
+	container-type: inline-size;
+	display: grid;
+	gap: var(--gap);
+	margin-inline: auto;
+	max-inline-size: 768px;
+
+	& >* {
+		background-color: hsl(160, 100%, 75%);
+		color: hsl(195deg, 25%, 95%);
+		clip-path: var(--_cp);
+		line-height: 1.4;
+		justify-self: start;
+		max-inline-size: var(--_w, fit-content);
+		padding-block: calc(var(--_c) / 1.5) var(--_c);
+		padding-inline: var(--_c);
+		position: relative;
+		&:nth-of-type(even) { justify-self: end; }
+		&::after {
+			background-color: hsl(195deg, 25%, 15%);
+			clip-path: inherit;
+			content: '';
+			display: block;
+			height: 100%;
+			inset-block-start: calc(0cqi - (var(--_c) / 3));
+			inset-inline-start: calc(0cqi - (var(--_c) / 3));
+			position: absolute;
+			width: 100%;
+			z-index: -1;
+		}
+		&::before {
+			background-color: aquamarine;
+			content: '';
+			height: 4ch;
+			position: absolute;
+			top: 100%;
+			width: var(--gap);
+		}
+	}
+}
+
 
 
 	
