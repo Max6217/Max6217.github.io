@@ -1,5 +1,13 @@
 body {
   background-color: lightblue;
 }
+background-color: aquamarine;
+content: '';
+height: 4ch;
+position: absolute;
+top: 100%;
+width: var(--gap);
+}
+
 
 	
