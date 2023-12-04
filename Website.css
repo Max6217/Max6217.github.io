@@ -1,66 +1,6 @@
 body {
   background-color: lightblue;
 }
-* { box-sizing: border-box; }
-html {
-table {
-	width: 100%;
-	& th { padding-block: 1ch; text-align: start; }
-	& :is(td, th):last-of-type { text-align: end; }
-}
-ul {
-	list-style-position: inside; 
-	padding: 0;
-  list-style-type: square;
-}
-li::marker { color: hsl(160, 100%, 75%); }
-
-.dashboard {
-	background: linear-gradient(to right, 
-		transparent 0 50%,
-		hsl(160, 100%, 75%) 50%,
-		hsl(160, 100%, 75%) 52%,
-		transparent 0 100%);
-	container-type: inline-size;
-	display: grid;
-	gap: var(--gap);
-	margin-inline: auto;
-	max-inline-size: 768px;
-
-	& >* {
-		background-color: hsl(160, 100%, 75%);
-		color: hsl(195deg, 25%, 95%);
-		clip-path: var(--_cp);
-		line-height: 1.4;
-		justify-self: start;
-		max-inline-size: var(--_w, fit-content);
-		padding-block: calc(var(--_c) / 1.5) var(--_c);
-		padding-inline: var(--_c);
-		position: relative;
-		&:nth-of-type(even) { justify-self: end; }
-		&::after {
-			background-color: hsl(195deg, 25%, 15%);
-			clip-path: inherit;
-			content: '';
-			display: block;
-			height: 100%;
-			inset-block-start: calc(0cqi - (var(--_c) / 3));
-			inset-inline-start: calc(0cqi - (var(--_c) / 3));
-			position: absolute;
-			width: 100%;
-			z-index: -1;
-		}
-		&::before {
-			background-color: aquamarine;
-			content: '';
-			height: 4ch;
-			position: absolute;
-			top: 100%;
-			width: var(--gap);
-		}
-	}
-}
-
 
 
 	
