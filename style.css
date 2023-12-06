@@ -1,7 +1,7 @@
-body{
-	background-colour: light-blue;
+*{
+	margin: 0;
+	padding: 0;
 }
-
 .hero{
 	background: #ff676d;
 	height: 100vh;
