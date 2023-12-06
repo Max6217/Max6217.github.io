@@ -5,8 +5,8 @@
 
 .hero{
 	background: #ff676d;
-	height: 100%vh;
-	width: 100%;
+	height: 100vh;
+	width: 100;
 	position: relative;
 }
 .hero h1{
