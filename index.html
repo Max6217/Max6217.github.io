@@ -9,12 +9,12 @@
 
         <div class="container">
             <div class="indicator">
-                <span class="btn"></span>
+                <span class="btn active"></span>
                 <span class="btn"></span>
                 <span class="btn"></span>
             </div>
                 <div class="testimonial"> 
-                    <div class="slide-row">
+                    <div class="slide-row" id="slide">
                         <div class="slide-col">
                             <div class="user-text">
                                 <p>Direct translation of  Kaitiakitanga - A person, group, or being that acts as a guardian or protector to something else e.g. Land, Tapu, Taunga, or Ancestors, someone who carries out an action. 
@@ -70,5 +70,20 @@
        
         
     </div>
+
+<script>
+    var btn = document.getElementsByClassName("btn");
+    var slide = document.getElementsById("slide");
+
+    btn[0].onclick = function(){
+        slide.style.transform = 'translatex(0px)';
+    }
+    btn[1].onclick = function(){
+        slide.style.transform = 'translatex(-800px)';
+    } 
+    btn[2].onclick = function(){
+        slide.style.transform = 'translatex(-1600px)';
+    } 
+</script>
 </body>
 </html>
