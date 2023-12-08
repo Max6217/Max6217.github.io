@@ -110,8 +110,28 @@
        
         
 </div>
-
 <script>
+    var btn = document.getElementsByClassName("btn");
+    var slide = document.getElementById("slide");
+
+for (var i = 0; i < btn.length; i++) {
+    btn[i].onclick = function (index) {
+        return function () {
+            var translationValue = -800 * index;
+            slide.style.transform = "translateX(" + translationValue + "px)";
+
+            // Remove "active" class from all buttons
+            for (var j = 0; j < btn.length; j++) {
+                btn[j].classList.remove("active");
+            }
+
+            // Add "active" class to the clicked button
+            this.classList.add("active");
+        };
+    }(i); // Immediately-invoked function expression (IIFE) to capture the current value of i
+}
+</script>
+<!-- <script>
     var btn = document.getElementsByClassName("btn");
     var slide = document.getElementById("slide");
 
@@ -164,6 +184,6 @@
         }
         this.classList.add("active");
     }
-</script>
+</script> -->
 </body>
 </html>
