@@ -3,6 +3,40 @@
   <title>Mckelvy 2 social studies</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<body>
+    <button class="slide-button" onclick="changeContent(0)">Molly & Olivia</button>
+    <button class="slide-button" onclick="changeContent(1)">Button 2</button>
+    <button class="slide-button" onclick="changeContent(1)">Button 3</button>
+    <div class="slide-row" id="slide">
+        <div class="slide-col">
+            <div class="user-text">
+                <!-- Content will be changed dynamically -->
+            </div>
+        </div>
+    </div>
+    <script>
+        // Sample array of content corresponding to each button
+        const contentArray = [
+            "Direct translation of  Kaitiakitanga - A person, group, or being that acts as a guardian or protector to something else e.g. Land, Tapu, Taunga, or Ancestors, someone who carries out an action. But there is deeper meaning than what was explained here.Guardianship, protection, preservation. Guardianship over tapu like pounamu, and sacred things.Kaitiakitanga is spiritual/physical guardianship over a person or thing. It can be being a mother, older sibling, or teacher. This means you are a kaitiaki for others.Things like pounamu are usually very special to people, since it is a very rare stone. Another example is that we are kaitiaki over wellington’s streams and environment, which means we need to take care of it.",
+            "Content for Button 2",
+            "",
+            // Add more content as needed
+        ];
+        
+        // Function to change the content based on the button clicked
+        function changeContent(index) {
+            // Assuming there is only one element with class "user-text"
+            const userText = document.querySelector(".user-text");
+            
+            // Check if the index is within the bounds of the contentArray
+            if (index >= 0 && index < contentArray.length) {
+                // Set the content based on the clicked button
+                userText.innerHTML = contentArray[index];
+            }
+        }
+        </script>
+    </body>
+    </html>
 <!-- <body>
     <div class="hero">
         <h1>9 Mckelvy 2 social studies Kaitiakitanga</h1>
@@ -185,29 +219,5 @@ for (var i = 0; i < btn.length; i++) {
         this.classList.add("active");
     }
 </script> -->
-<body>
-<button class="slide-button" onclick="changeContent(0)">Button 1</button>
-<button class="slide-button" onclick="changeContent(1)">Button 2</button>
-<script>
-    // Sample array of content corresponding to each button
-    const contentArray = [
-        "Direct translation of  Kaitiakitanga - A person, group, or being that acts as a guardian or protector to something else e.g. Land, Tapu, Taunga, or Ancestors, someone who carries out an action. But there is deeper meaning than what was explained here.Guardianship, protection, preservation. Guardianship over tapu like pounamu, and sacred things.Kaitiakitanga is spiritual/physical guardianship over a person or thing. It can be being a mother, older sibling, or teacher. This means you are a kaitiaki for others.Things like pounamu are usually very special to people, since it is a very rare stone. Another example is that we are kaitiaki over wellington’s streams and environment, which means we need to take care of it.",
-        "Content for Button 2",
-        "",
-        // Add more content as needed
-    ];
-    
-    // Function to change the content based on the button clicked
-    function changeContent(index) {
-        // Assuming there is only one element with class "user-text"
-        const userText = document.querySelector(".user-text");
-        
-        // Check if the index is within the bounds of the contentArray
-        if (index >= 0 && index < contentArray.length) {
-            // Set the content based on the clicked button
-            userText.innerHTML = contentArray[index];
-        }
-    }
-    </script>
-</body>
-</html>
+<!-- </body>
+</html> -->
