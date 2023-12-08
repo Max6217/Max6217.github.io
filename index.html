@@ -1,12 +1,59 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Mckelvy 2 social studies</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .slide-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .slide-button:hover {
+            background-color: #2980b9;
+        }
+
+        .slide-row {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .slide-col {
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .user-text {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <button class="slide-button" onclick="changeContent(0)">Molly & Olivia</button>
+    <!-- Your body content goes here -->
+
+    <!-- Assume you have multiple buttons with class "slide-button" -->
+    <button class="slide-button" onclick="changeContent(0)">Button 1</button>
     <button class="slide-button" onclick="changeContent(1)">Button 2</button>
-    <button class="slide-button" onclick="changeContent(1)">Button 3</button>
+    <!-- Add more buttons as needed -->
+
     <div class="slide-row" id="slide">
         <div class="slide-col">
             <div class="user-text">
@@ -14,15 +61,16 @@
             </div>
         </div>
     </div>
+
+    <!-- Your scripts go here -->
     <script>
         // Sample array of content corresponding to each button
         const contentArray = [
-            "Direct translation of  Kaitiakitanga - A person, group, or being that acts as a guardian or protector to something else e.g. Land, Tapu, Taunga, or Ancestors, someone who carries out an action. But there is deeper meaning than what was explained here.Guardianship, protection, preservation. Guardianship over tapu like pounamu, and sacred things.Kaitiakitanga is spiritual/physical guardianship over a person or thing. It can be being a mother, older sibling, or teacher. This means you are a kaitiaki for others.Things like pounamu are usually very special to people, since it is a very rare stone. Another example is that we are kaitiaki over wellington’s streams and environment, which means we need to take care of it.",
+            "Content for Button 1",
             "Content for Button 2",
-            "",
             // Add more content as needed
         ];
-        
+
         // Function to change the content based on the button clicked
         function changeContent(index) {
             // Assuming there is only one element with class "user-text"
@@ -34,6 +82,8 @@
                 userText.innerHTML = contentArray[index];
             }
         }
-        </script>
-    </body>
-    </html>
+    </script>
+
+    <!-- Additional scripts, if any -->
+</body>
+</html>
