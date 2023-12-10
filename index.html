@@ -116,7 +116,7 @@
                     "6: What’s the cost to build a Nuclear Power Plant (rounded to the nearest billion dollars)?<br>" +
                     "7: How do nuclear power plants make energy?<br>"
         console.log(Charlie1);
-     var Charlies_Quiz_Answers1 = "Nuclear Energy Quiz<br>" +
+     var Charlies_Quiz_Answers1 = "Nuclear Energy Quiz Answers<br>" +
                     "1: There are 412 operable nuclear power plants in the world right now.<br>" +
                     "2: It is a 0.03% chance of a nuclear meltdown<br>" +
                     "3: 24,000,000 kWh<br>" +
@@ -139,6 +139,19 @@
         var Ahmed1 = "Greenpeace is a renowned international environmental organization that has been at the forefront of global environmental activism since its establishment in 1971. Committed to promoting peace and safeguarding the planet, Greenpeace is recognized for its non-violent direct action campaigns that focus on issues such as climate change, deforestation, overfishing, and nuclear power. The organization employs a combination of grassroots organizing, scientific research, and high-profile actions to draw attention to environmental threats and advocate for sustainable solutions. With a presence in over 55 countries, Greenpeace engages in advocacy, lobbying, and public awareness efforts to effect change at both local and global levels. Known for its iconic rainbow warrior logo and passionate commitment to the planet, Greenpeace continues to be a powerful force in advocating for a more sustainable and ecologically balanced world."
         console.log(Ahmed1);
     </script>
+    <script>
+     var Otis1 = "Free Store<br>" +
+                "<br>" +
+                "If you ever find yourself walking along Ghuznee or Willis street you may have seen the free store before. A large shipping crate building just set off to the side of Saint Peter's church. <br>" +
+                "The Free Store is a charity set up to give people free food whether you're in financial trouble or you can't pay for basic needs like food. The Free Store when laid down is an amazing idea for a charity. <br>" +
+                "<br>" +
+                "Volunteers <br>" +
+                "<br>" +
+                "A surprising amount of people work for the Free store. Sometimes when you're walking through town mainly on Willis street You might see a person or two moving around with a grey shopping cart Those are used to keep food warm and insulated.<br>" +
+                "270 volunteers over more than 3800 volunteers shifts, the charity is quite big and has a friendly and passionate team helping hundreds of people. <br>" +
+                "If you want help for a cause you can donate to the Free Store using this link —-> https://givealittle.co.nz/org/thefreestore <br>"
+        console.log(Otis1);
+    </script>
     <div class="button-container">
         <!-- Assume you have multiple buttons with class "slide-button" -->
         <button class="slide-button" onclick="changeContent(0)">Senula</button>
@@ -149,9 +162,8 @@
         <button class="slide-button" onclick="changeContent(5)">Charlie's quiz answers</button>
         <button class="slide-button" onclick="changeContent(6)">Shu</button>
         <button class="slide-button" onclick="changeContent(7)">Ahmed</button>
-        <!-- Add more buttons as needed -->
+        <button class="slide-button" onclick="changeContent(8)">Otis</button>    
     </div>
-
     <div class="slide-row" id="slide">
         <div class="slide-col">
             <div class="user-text">
@@ -171,7 +183,8 @@
             ""+ Charlie1 + "",
             ""+ Charlies_Quiz_Answers1+ "",
             ""+ Shu1 + "",
-            ""+ Ahmed1 + ""
+            ""+ Ahmed1 + "",
+            "" + Otis1 + ""
             // Add more content as needed
         ];
 
