@@ -155,9 +155,15 @@
     <script>
     var Lachie1 = "Copy & Paste this link in google<br>" +
     "https://scratch.mit.edu/projects/933294580/embed"
-
         console.log(Lachie1);
     </script>
+     <script>
+        var Sophie1 =  '<video width="640" height="360" controls>' +
+    '<source src="Sophie_Terra_Jinan.mp4" type="video/mp4">' +
+    '<source src="Sophie_Terra_Jinan.webm" type="video/webm">' +
+    '</video>';
+    console.log(Sophie1);
+       </script>
     <div class="button-container">
         <!-- Assume you have multiple buttons with class "slide-button" -->
         <button class="slide-button" onclick="changeContent(0)">Senula</button>
@@ -169,7 +175,8 @@
         <button class="slide-button" onclick="changeContent(6)">Shu</button>
         <button class="slide-button" onclick="changeContent(7)">Ahmed & Hugo</button>
         <button class="slide-button" onclick="changeContent(8)">Otis</button> 
-        <button class="slide-button" onclick="changeContent(9)">Lachie</button>      
+        <button class="slide-button" onclick="changeContent(9)">Lachie</button>   
+        <button class="slide-button" onclick="changeContent(10)">Sophie & Terra & Jinan</button>      
     </div>
     <div class="slide-row" id="slide">
         <div class="slide-col">
@@ -192,8 +199,8 @@
             ""+ Shu1 + "",
             ""+ Ahmed_Hugo1 + "",
             "" + Otis1 + "",
-            "" + Lachie1 + ""
-            // Add more content as needed
+            "" + Lachie1 + "",
+            "" + Sophie1 + ""            // Add more content as needed
         ];
 
         // Function to change the content based on the button clicked
